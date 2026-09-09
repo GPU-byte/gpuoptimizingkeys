@@ -19,7 +19,7 @@ const CONFIG = {
 
   // Prices
   prices: {
-    monthly: "£15.00",
+    monthly: "£5.00",
     lifetime: "£25.00"
   },
 
