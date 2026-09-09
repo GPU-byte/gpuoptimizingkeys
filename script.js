@@ -1,196 +1,270 @@
-/*
-==================================================
-                WEBSITE CONFIG
-==================================================
-
-Change the values below to customize your website.
-*/
+// =====================================================
+// GPU'S OPTIMIZER CONFIG
+// =====================================================
 
 const CONFIG = {
 
-    // Website name
-    siteName: "GPU's Keys",
+  // Website
+  siteName: "GPU's Optimizer",
 
-    // Main homepage
-    heroTitle: "Welcome to GPU's Optimizer Keys",
+  // Hero
+  heroTitle: "GPU's Optimizer",
 
-    heroDescription:
-        "Premium products, great support and an amazing community.",
+  heroDescription:
+    "Optimize your gaming experience with GPU's Optimizer.",
 
+  // Discord
+  discordInvite:
+    "https://discord.gg/YOURINVITELINK",
 
-    // Discord
-    discordInvite:
-        "https://discord.gg/HFzeJEBtfr",
+  // Prices
+  prices: {
+    monthly: "$5.00",
+    lifetime: "$25.00"
+  },
 
+  // About
+  aboutText:
+    "GPU's Optimizer is focused on helping users get the most out of their gaming systems through optimization and performance improvements.",
 
-    // Prices
-    prices: {
+  // Download
+  download: {
 
-        monthly: "£10",
+    title:
+      "Download GPU's Optimizer",
 
-        lifetime: "£20"
+    description:
+      "Click below to download the latest version of GPU's Optimizer.",
 
+    buttonText:
+      "Download Now",
+
+    downloadUrl:
+      "YOUR_DOWNLOAD_LINK_HERE",
+
+    version:
+      "v1.0.0"
+  },
+
+  // Management
+  management: {
+
+    manager1: {
+      name: "Manager",
+      role: "Management",
+      description: "GPU's Optimizer Management Team"
     },
 
+    manager2: {
+      name: "Manager",
+      role: "Management",
+      description: "GPU's Optimizer Management Team"
+    },
 
-    // About page
-    aboutText:
-        "We are a community focused on providing quality products and a great experience for our members.",
-
-
-    // Management
-    management: {
-
-        manager1: {
-            name: "GPU",
-            description: "Website owner"
-        },
-
-        manager2: {
-            name: "Kaxwz",
-            description: "Administrator"
-        },
-
-        manager3: {
-            name: "lrp",
-            description: "Customer support"
-        }
-
+    manager3: {
+      name: "Manager",
+      role: "Management",
+      description: "GPU's Optimizer Management Team"
     }
+
+  }
 
 };
 
 
-/*
-==================================================
-              DO NOT EDIT BELOW
-==================================================
-*/
+// =====================================================
+// PAGE SWITCHING
+// =====================================================
 
+function showPage(pageName) {
 
-// Website name
-document.getElementById("siteName").textContent =
-    CONFIG.siteName;
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
 
-document.getElementById("footerName").textContent =
-    CONFIG.siteName;
+  const page = document.getElementById(pageName);
 
+  if (page) {
+    page.classList.add("active");
+  }
 
-// Homepage
-document.getElementById("heroTitle").textContent =
-    CONFIG.heroTitle;
-
-document.getElementById("heroDescription").textContent =
-    CONFIG.heroDescription;
-
-
-// Prices
-document.getElementById("monthlyPrice").textContent =
-    CONFIG.prices.monthly;
-
-document.getElementById("lifetimePrice").textContent =
-    CONFIG.prices.lifetime;
-
-
-// About
-document.getElementById("aboutText").textContent =
-    CONFIG.aboutText;
-
-
-// Management
-document.getElementById("manager1Name").textContent =
-    CONFIG.management.manager1.name;
-
-document.getElementById("manager1Description").textContent =
-    CONFIG.management.manager1.description;
-
-
-document.getElementById("manager2Name").textContent =
-    CONFIG.management.manager2.name;
-
-document.getElementById("manager2Description").textContent =
-    CONFIG.management.manager2.description;
-
-
-document.getElementById("manager3Name").textContent =
-    CONFIG.management.manager3.name;
-
-document.getElementById("manager3Description").textContent =
-    CONFIG.management.manager3.description;
-
-
-/*
-==================================================
-                    TABS
-==================================================
-*/
-
-function showPage(page) {
-
-    // Hide every page
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach(function(section) {
-        section.classList.remove("active");
-    });
-
-
-    // Show selected page
-    document.getElementById(page).classList.add("active");
-
-    // Scroll to top
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
 
 
-/*
-==================================================
-                DISCORD BUTTON
-==================================================
-*/
+// =====================================================
+// DISCORD
+// =====================================================
 
 function openDiscord() {
 
-    window.location.href = CONFIG.discordInvite;
+  window.open(
+    CONFIG.discordInvite,
+    "_blank"
+  );
 
 }
 
 
-/*
-==================================================
-              PURCHASE BUTTONS
-==================================================
-*/
+// =====================================================
+// PURCHASE
+// =====================================================
 
 function purchase(type) {
 
-    let message = "";
-
-    if (type === "monthly") {
-
-        message =
-            "I would like to purchase Pro Monthly.";
-
-    }
-
-    if (type === "lifetime") {
-
-        message =
-            "I would like to purchase Pro Lifetime.";
-
-    }
-
-
-    /*
-    The Discord server receives the visitor.
-
-    You can also use different Discord invite
-    links for different products if you want.
-    */
-
-    window.location.href = CONFIG.discordInvite;
+  window.open(
+    CONFIG.discordInvite,
+    "_blank"
+  );
 
 }
+
+
+// =====================================================
+// LOAD WEBSITE CONFIG
+// =====================================================
+
+function loadConfig() {
+
+  // Browser title
+  document.title = CONFIG.siteName;
+
+  // Hero description
+  const heroDescription =
+    document.getElementById("heroDescription");
+
+  if (heroDescription) {
+    heroDescription.textContent =
+      CONFIG.heroDescription;
+  }
+
+
+  // Monthly price
+  const monthlyPrice =
+    document.getElementById("monthlyPrice");
+
+  if (monthlyPrice) {
+    monthlyPrice.textContent =
+      CONFIG.prices.monthly;
+  }
+
+
+  // Lifetime price
+  const lifetimePrice =
+    document.getElementById("lifetimePrice");
+
+  if (lifetimePrice) {
+    lifetimePrice.textContent =
+      CONFIG.prices.lifetime;
+  }
+
+
+  // About
+  const aboutText =
+    document.getElementById("aboutText");
+
+  if (aboutText) {
+    aboutText.textContent =
+      CONFIG.aboutText;
+  }
+
+
+  // Download title
+  const downloadTitle =
+    document.getElementById("downloadTitle");
+
+  if (downloadTitle) {
+    downloadTitle.textContent =
+      CONFIG.download.title;
+  }
+
+
+  // Download description
+  const downloadDescription =
+    document.getElementById("downloadDescription");
+
+  if (downloadDescription) {
+    downloadDescription.textContent =
+      CONFIG.download.description;
+  }
+
+
+  // Download button
+  const downloadButton =
+    document.getElementById("downloadButton");
+
+  if (downloadButton) {
+
+    downloadButton.textContent =
+      CONFIG.download.buttonText;
+
+    downloadButton.href =
+      CONFIG.download.downloadUrl;
+
+  }
+
+
+  // Download version
+  const downloadVersion =
+    document.getElementById("downloadVersion");
+
+  if (downloadVersion) {
+
+    downloadVersion.textContent =
+      CONFIG.download.version;
+
+  }
+
+
+  // Management 1
+  document.getElementById("manager1Name").textContent =
+    CONFIG.management.manager1.name;
+
+  document.getElementById("manager1Role").textContent =
+    CONFIG.management.manager1.role;
+
+  document.getElementById("manager1Description").textContent =
+    CONFIG.management.manager1.description;
+
+
+  // Management 2
+  document.getElementById("manager2Name").textContent =
+    CONFIG.management.manager2.name;
+
+  document.getElementById("manager2Role").textContent =
+    CONFIG.management.manager2.role;
+
+  document.getElementById("manager2Description").textContent =
+    CONFIG.management.manager2.description;
+
+
+  // Management 3
+  document.getElementById("manager3Name").textContent =
+    CONFIG.management.manager3.name;
+
+  document.getElementById("manager3Role").textContent =
+    CONFIG.management.manager3.role;
+
+  document.getElementById("manager3Description").textContent =
+    CONFIG.management.manager3.description;
+
+}
+
+
+// =====================================================
+// START WEBSITE
+// =====================================================
+
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
+
+    loadConfig();
+
+    showPage("home");
+
+  }
+);
