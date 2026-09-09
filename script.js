@@ -15,11 +15,11 @@ const CONFIG = {
 
   // Discord
   discordInvite:
-    "https://discord.gg/YOURINVITELINK",
+    "https://discord.gg/HFzeJEBtfr",
 
   // Prices
   prices: {
-    monthly: "$5.00",
+    monthly: "$15.00",
     lifetime: "$25.00"
   },
 
@@ -40,7 +40,7 @@ const CONFIG = {
       "Download Now",
 
     downloadUrl:
-      "YOUR_DOWNLOAD_LINK_HERE",
+      "https://gofile.io/d/4YMrOviH",
 
     version:
       "v1.0.0"
