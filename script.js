@@ -50,19 +50,19 @@ const CONFIG = {
   management: {
 
     manager1: {
-      name: "Manager",
-      role: "Management",
-      description: "GPU's Optimizer Management Team"
+      name: "GPU",
+      role: "Owner / Lead Developer",
+      description: "GPU's Optimizer Developer / Owner Team"
     },
 
     manager2: {
-      name: "Manager",
-      role: "Management",
-      description: "GPU's Optimizer Management Team"
+      name: "Kaxwz.",
+      role: "Co Owner",
+      description: "GPU's Optimizer Owner Team"
     },
 
     manager3: {
-      name: "Manager",
+      name: "LRP",
       role: "Management",
       description: "GPU's Optimizer Management Team"
     }
