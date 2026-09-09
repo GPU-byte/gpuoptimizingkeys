@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Website</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="logo" id="siteName">
+            My Website
+        </div>
+
+        <div class="nav-links">
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('keys')">Keys</button>
+            <button onclick="showPage('about')">Who Are We?</button>
+            <button onclick="showPage('management')">Management</button>
+            <button onclick="openDiscord()">Join The Discord</button>
+        </div>
+
+    </nav>
+
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+
+        <div class="hero">
+
+            <h1 id="heroTitle">
+                Welcome to My Website
+            </h1>
+
+            <p id="heroDescription">
+                Your description goes here.
+            </p>
+
+            <button class="main-button" onclick="showPage('keys')">
+                View Keys
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- KEYS -->
+    <section id="keys" class="page">
+
+        <div class="container">
+
+            <h1>Keys</h1>
+
+            <p class="subtitle">
+                Choose the key that works best for you.
+            </p>
+
+
+            <div class="pricing">
+
+                <!-- MONTHLY -->
+                <div class="price-card">
+
+                    <h2>Pro / Month</h2>
+
+                    <div class="price" id="monthlyPrice">
+                        £5
+                    </div>
+
+                    <p>
+                        Monthly Pro access.
+                    </p>
+
+                    <button
+                        class="buy-button"
+                        onclick="purchase('monthly')">
+                        Purchase
+                    </button>
+
+                </div>
+
+
+                <!-- LIFETIME -->
+                <div class="price-card featured">
+
+                    <div class="popular">
+                        POPULAR
+                    </div>
+
+                    <h2>Pro / Lifetime</h2>
+
+                    <div class="price" id="lifetimePrice">
+                        £20
+                    </div>
+
+                    <p>
+                        Lifetime Pro access.
+                    </p>
+
+                    <button
+                        class="buy-button"
+                        onclick="purchase('lifetime')">
+                        Purchase
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHO ARE WE -->
+    <section id="about" class="page">
+
+        <div class="container">
+
+            <h1>Who Are We?</h1>
+
+            <div class="content-box">
+
+                <p id="aboutText">
+                    We are a community focused on providing quality
+                    products and a great experience for our members.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MANAGEMENT -->
+    <section id="management" class="page">
+
+        <div class="container">
+
+            <h1>Management</h1>
+
+            <div class="management-grid">
+
+                <div class="manager">
+                    <h2 id="manager1Name">Owner</h2>
+                    <p id="manager1Description">
+                        Website owner
+                    </p>
+                </div>
+
+                <div class="manager">
+                    <h2 id="manager2Name">Administrator</h2>
+                    <p id="manager2Description">
+                        Administrator
+                    </p>
+                </div>
+
+                <div class="manager">
+                    <h2 id="manager3Name">Support</h2>
+                    <p id="manager3Description">
+                        Customer support
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DISCORD -->
+    <section id="discord" class="page">
+
+        <div class="container discord-page">
+
+            <h1>Join The Discord</h1>
+
+            <p>
+                Join our Discord community to purchase keys,
+                receive support and talk with the community.
+            </p>
+
+            <button class="discord-button" onclick="openDiscord()">
+                Join Discord
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © <span id="footerName">GPU's Optimizer Keys</span>
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
